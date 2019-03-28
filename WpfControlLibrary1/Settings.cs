@@ -9,5 +9,7 @@ namespace UniversalPictureViewer
     public class Settings
     {
         public static string WindowTitle { set; get; }
+        public static string ViewerGroupBoxHeader { get; set; }
+        public static string PictureDirectory { get; set; }
     }
 }

@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -48,10 +49,13 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ImageInformation.cs" />
+    <Compile Include="ReflectionHelper.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="UPWWindow.xaml.cs">
       <DependentUpon>UPWWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UWPControler.cs" />
     <Page Include="UPWWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

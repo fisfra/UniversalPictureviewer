@@ -24,9 +24,14 @@ namespace UPWTester
         public MainWindow()
         {
             InitializeComponent();
+        }
 
+        private void Start_Click(object sender, RoutedEventArgs e)
+        {
             Settings.WindowTitle = "My Viewer";
-            UPWWindow viewer = new UPWWindow();
+            Settings.ViewerGroupBoxHeader = "Image";
+            Settings.PictureDirectory = @"C:\Users\d040841\Pictures\Saved Pictures";
+            UPWWindow viewer = new UPWWindow(UPWWindow.EMode.directory_mode);
 
             viewer.ShowDialog();
         }

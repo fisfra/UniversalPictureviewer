@@ -19,16 +19,48 @@ namespace UniversalPictureViewer
     /// </summary>
     public partial class UPWWindow : Window
     {
-        public UPWWindow()
+        public enum EMode {directory_mode, database_mode};
+
+        private UPWControler _controler;
+
+        public UPWWindow(EMode mode)
         {
             InitializeComponent();
 
-            UseSettings();
+            _controler = new UPWControler(this, mode);
+
+            _controler.ApplySetting();
         }
 
-        private void UseSettings()
+        private void imgViewer_PreviewMouseRightButtonUp(object sender, MouseButtonEventArgs e)
         {
-            this.Title = Settings.WindowTitle;
+            if (Keyboard.IsKeyDown(Key.LeftShift))
+            {
+                _controler.HandleClose();
+            }
+        }
+
+        private void imgViewer_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            Mouse.OverrideCursor = Cursors.Wait;
+
+            //cbFavourite.IsChecked = !cbFavourite.IsChecked;
+            //_controler.ToggleFavourites();
+
+            Mouse.OverrideCursor = null;
+        }
+
+        private void imgViewer_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.MiddleButton == MouseButtonState.Pressed)
+            {
+                _controler.HandleClose();
+            }
+        }
+
+        private void MouseThroughFav_Click(object sender, RoutedEventArgs e)
+        {
+            //_controler.HandleMouseThroughFav_Click();
         }
     }
 }

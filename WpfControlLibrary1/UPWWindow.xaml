@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UniversalPictureViewer"
         mc:Ignorable="d"
-        Title="_title_" Height="450" Width="800">
-   
+        Title="_title_" Height="1304" Width="1734">
+
     <Grid Margin="10,0,10,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -15,5 +15,24 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+
+        <GroupBox Name="ViewerGroupBox" Header="_header_" Background="#FFF9F9F9" Grid.Column="0">
+            <Grid Name ="imgStackGrid" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Image x:Name="imgViewer" Margin="10,10,10,10" Stretch="Uniform" StretchDirection="Both"  Source="C:\Users\d040841\Pictures\Saved Pictures\download.jpg"
+                       PreviewMouseRightButtonUp="imgViewer_PreviewMouseRightButtonUp" PreviewMouseLeftButtonUp="imgViewer_PreviewMouseLeftButtonUp" PreviewMouseDown="imgViewer_PreviewMouseDown">
+                    <Image.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem x:Name="MouseThroughFav"  IsCheckable="True"  Header="Mouse through Fav" Click="MouseThroughFav_Click"/>
+
+                            <!--<MenuItem x:Name="GoogleSearch1"  Header="Google Search 1" Click="GoogleSearch1_Click"/>
+                            <MenuItem x:Name="GoogleSearch2"  Header="Google Search 2" Click="GoogleSearch2_Click"/>
+                            <MenuItem x:Name="GoogleSearch3"  Header="Google Search 3" Click="GoogleSearch3_Click"/> -->
+                        </ContextMenu>
+                    </Image.ContextMenu>
+                </Image>
+            </Grid>
+        </GroupBox>
+
+
     </Grid>
 </Window>
