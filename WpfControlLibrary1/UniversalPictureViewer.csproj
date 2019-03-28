@@ -48,14 +48,14 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="UniveralPictureViewer.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="UniveralPictureViewer.xaml.cs">
-      <DependentUpon>UniveralPictureViewer.xaml</DependentUpon>
-      <SubType>Code</SubType>
+    <Compile Include="Settings.cs" />
+    <Compile Include="UPWWindow.xaml.cs">
+      <DependentUpon>UPWWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="UPWWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

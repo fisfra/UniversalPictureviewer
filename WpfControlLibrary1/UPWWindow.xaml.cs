@@ -10,19 +10,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfControlLibrary1
+namespace UniversalPictureViewer
 {
     /// <summary>
-    /// Interaction logic for UserControl1.xaml
+    /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class UserControl1 : UserControl
+    public partial class UPWWindow : Window
     {
-        public UserControl1()
+        public UPWWindow()
         {
             InitializeComponent();
+        }
+
+        private void UseSettings()
+        {
+            this.Title = Settings.WindowTitle;
         }
     }
 }
