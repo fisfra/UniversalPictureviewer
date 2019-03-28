@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.539
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversalPictureViewer", "WpfControlLibrary1\UniversalPictureViewer.csproj", "{951114E9-5A18-40E0-BCDE-D0CB2B8AA01A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UPWTester", "UPWTester\UPWTester.csproj", "{DCFA77D6-8530-4C6B-88FA-9E81A8843201}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{951114E9-5A18-40E0-BCDE-D0CB2B8AA01A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{951114E9-5A18-40E0-BCDE-D0CB2B8AA01A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{951114E9-5A18-40E0-BCDE-D0CB2B8AA01A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCFA77D6-8530-4C6B-88FA-9E81A8843201}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCFA77D6-8530-4C6B-88FA-9E81A8843201}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCFA77D6-8530-4C6B-88FA-9E81A8843201}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCFA77D6-8530-4C6B-88FA-9E81A8843201}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

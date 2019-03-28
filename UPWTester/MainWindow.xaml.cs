@@ -10,25 +10,25 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UniversalPictureViewer;
 
-namespace UniversalPictureViewer
+namespace UPWTester
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class UPWWindow : Window
+    public partial class MainWindow : Window
     {
-        public UPWWindow()
+        public MainWindow()
         {
             InitializeComponent();
 
-            UseSettings();
-        }
+            Settings.WindowTitle = "My Viewer";
+            UPWWindow viewer = new UPWWindow();
 
-        private void UseSettings()
-        {
-            this.Title = Settings.WindowTitle;
+            viewer.ShowDialog();
         }
     }
 }
